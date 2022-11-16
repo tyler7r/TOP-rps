@@ -13,5 +13,30 @@ const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!');
 toUpperCase(playerSelection);
 
 function playRound(playerSelection, computerSelection) {
-    if 
-}
+    if ((computerSelection = 'ROCK') && (playerSelection = 'PAPER')) {
+        return "Player Wins, PAPER beats ROCK"; 
+    } else if ((computerSelection = 'ROCK') && (playerSelection = 'SCISSORS')) {
+        return "Computer Wins, ROCK beats SCISSORS"
+    } else if ((computerSelection = 'ROCK') && (playerSelection = 'ROCK')) {
+        return "TIE, ROCK vs. ROCK"
+    } else if ((computerSelection = 'PAPER') && (playerSelection = 'PAPER')) {
+        return "TIE, PAPER vs. PAPER"
+    } else if ((computerSelection = 'PAPER') && (playerSelection = 'SCISSORS')) {
+        return "Player Wins, SCISSORS beats PAPER"
+    } else if ((computerSelection = 'PAPER') && (playerSelection = 'ROCK')) {
+        return "Computer Wins, PAPER beats ROCK"
+    } else if ((computerSelection = 'SCISSORS') && (playerSelection = 'PAPER')) {
+        return "Computer Wins, SCISSORS beats PAPER"
+    } else if ((computerSelection = 'SCISSORS') && (playerSelection = 'SCISSORS')) {
+        return "TIE, SCISSORS vs. SCISSORS"
+    } else if ((computerSelection = 'SCISSORS') && (playerSelection = 'ROCK')) {
+        return "Player Wins, ROCK beats SCISSORS"
+    } else {
+        return "Oops, something went terribly wrong try again."
+    }
+    }
+
+
+    
+    
+
