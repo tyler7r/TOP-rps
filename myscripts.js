@@ -9,8 +9,7 @@ function getComputerChoice () {
     }
 }
 const computerSelection = getComputerChoice();
-const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!');
-toUpperCase(playerSelection);
+const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!').toUpperCase();
 
 function playRound(playerSelection, computerSelection) {
     if ((computerSelection = 'ROCK') && (playerSelection = 'PAPER')) {
