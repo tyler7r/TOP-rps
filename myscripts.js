@@ -11,9 +11,6 @@ function playRound(playerSelection, computerSelection)
     }
 }
 
-const computerSelection = getComputerChoice();
-const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!').toUpperCase();
-
     if ((computerSelection = 'ROCK') && (playerSelection = 'PAPER')) {
         return "Player Wins, PAPER beats ROCK"; 
     } else if ((computerSelection = 'ROCK') && (playerSelection = 'SCISSORS')) {
@@ -36,6 +33,10 @@ const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!').toUpp
         return "Oops, something went terribly wrong try again."
     }
     }
+
+    let computerSelection = getComputerChoice();
+    let playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!').toUpperCase();
+    console.log(playRound(playerSelection, computerSelection));
 
 
     
