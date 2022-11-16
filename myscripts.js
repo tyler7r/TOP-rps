@@ -1,13 +1,17 @@
 function getComputerChoice () {
-    let computerSelection = Math.random () * 3;
-    if (computerSelection <=1) {
-        return "Rock";
+    let choice = Math.random () * 3;
+    if (choice <=1) {
+        return "ROCK";
     } else if (choice <=2) {
-        return "Paper";
+        return "PAPER";
     } else {
-        return "Scissors";
+        return "SCISSORS";
     }
 }
+const computerSelection = getComputerChoice();
 const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!');
 toUpperCase(playerSelection);
 
+function playRound(playerSelection, computerSelection) {
+    if 
+}
