@@ -1,4 +1,6 @@
-function getComputerChoice () {
+function playRound(playerSelection, computerSelection) 
+{ 
+    function getComputerChoice () {
     let choice = Math.random () * 3;
     if (choice <=1) {
         return "ROCK";
@@ -8,10 +10,10 @@ function getComputerChoice () {
         return "SCISSORS";
     }
 }
+
 const computerSelection = getComputerChoice();
 const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!').toUpperCase();
 
-function playRound(playerSelection, computerSelection) {
     if ((computerSelection = 'ROCK') && (playerSelection = 'PAPER')) {
         return "Player Wins, PAPER beats ROCK"; 
     } else if ((computerSelection = 'ROCK') && (playerSelection = 'SCISSORS')) {
