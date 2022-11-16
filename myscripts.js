@@ -8,5 +8,6 @@ function getComputerChoice () {
         return "Scissors";
     }
 }
-let playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!');
+const playerSelection = prompt('Choose your hero: Rock, Paper, Scissors!');
 toUpperCase(playerSelection);
+
