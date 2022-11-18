@@ -1,19 +1,4 @@
-function game () {
-    let round = playRound(playerSelection, computerSelection);
-    let playerWins = Num(x)
-    let computerWins = Num(y)
-    if (round.slice(0, 10) === 'Player Wins') {
-        playerWins = ++x;
-        return playerWins, computerWins;
-    } else if (round.slice(0,12 === 'Computer Wins')) {
-        computerWins = ++y;
-        return playerWins, computerWins;
-    } else {
-        return playerWins, computerWins;
-    }
-}    
-    
-        function getComputerChoice () {
+    function getComputerChoice () {
         let choice = Math.random () * 3;
         if (choice <=1) {
             return "ROCK";
