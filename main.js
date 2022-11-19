@@ -5,15 +5,17 @@ const scoreTally = checkWinner().charAt(0);
 function game() {
     for (let i = 1; i <= 5; i++) {
         playRound();
-        updateScore();
     }
+    updateScore();
 }
 
 function playRound () {
     const computerPlay = computerChoice();
     let playerPlay = prompt ("Make your choice: rock, paper or scissors.").toLowerCase();
     const winner = checkWinner(computerPlay, playerPlay);
+    const scoreBoard = getScoreBoard ();
     console.log(winner);
+    console.log (scoreBoard);
     winners.push(winner);
 }
 
@@ -36,19 +38,19 @@ function checkWinner(computerPlay, playerPlay) {
 
 function updateScore() {
     console.log (winners);
+}
+function getScoreBoard () {
+    scoreTally;
     let x = 0, y = 0, z = 0;
-    let playerWins = x;
-    let computerWins = y;
-    let ties = z;
     if (scoreTally === "T") {
         ++z
-        return ("Player: " + x + "   Computer: " + computerWins + "   Ties: " + ties);
+        return ("Player: " + x + "   Computer: " + y + "   Ties: " + z);
     } else if (scoreTally === "C") {
         ++y
-        return ("Player: " + x + "   Computer: " + computerWins + "   Ties: " + ties);
+        return ("Player: " + x + "   Computer: " + y + "   Ties: " + z);
     } else {
         ++x
-        return ("Player: " + x + "   Computer: " + computerWins + "   Ties: " + ties);
+        return ("Player: " + x + "   Computer: " + y + "   Ties: " + z);
     }
 }
 
