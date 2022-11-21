@@ -1,22 +1,23 @@
 const choices = ["rock", "paper", "scissors"];
 const winners = [];
-const scoreTally = checkWinner().charAt(0);
 
 function game() {
     for (let i = 1; i <= 5; i++) {
+        console.log("Round: " + i);
         playRound();
+        console.log ("---------------------");
     }
-    updateScore();
 }
 
 function playRound () {
     const computerPlay = computerChoice();
     let playerPlay = prompt ("Make your choice: rock, paper or scissors.").toLowerCase();
     const winner = checkWinner(computerPlay, playerPlay);
-    const scoreBoard = getScoreBoard ();
+    //const scoreBoard = getScoreBoard (winner);//
     console.log(winner);
-    console.log (scoreBoard);
     winners.push(winner);
+    updateScore();
+    //console.log(scoreBoard);//
 }
 
 function computerChoice() {
@@ -37,21 +38,26 @@ function checkWinner(computerPlay, playerPlay) {
 }
 
 function updateScore() {
-    console.log (winners);
+    let playerWins = winners.filter((item) => item == "Player").length;
+    let computerWins = winners.filter((item) => item == "Computer").length;
+    let ties = winners.filter((item) => item == "Tie").length;
+    console.log("Player: " + playerWins + " Computer: " + computerWins + " Ties: " + ties)
 }
-function getScoreBoard () {
-    scoreTally;
-    let x = 0, y = 0, z = 0;
-    if (scoreTally === "T") {
-        ++z
+function getScoreBoard (winner) {
+    winners;
+    let x = 0; y = 0; z = 0;
+    if (winner === 'Tie') {
+        (++z);
         return ("Player: " + x + "   Computer: " + y + "   Ties: " + z);
-    } else if (scoreTally === "C") {
-        ++y
+    } else if (winner === 'Computer') {
+        (++y);
+        return ("Player: " + x + "   Computer: " + y + "   Ties: " + z);
+    } else if (winner === 'Player') {
+        (++x);
         return ("Player: " + x + "   Computer: " + y + "   Ties: " + z);
     } else {
-        ++x
         return ("Player: " + x + "   Computer: " + y + "   Ties: " + z);
-    }
+}
 }
 
 //function scoreBoard(); {//
@@ -61,5 +67,4 @@ function getScoreBoard () {
     //if (scoreTally = T) {
 
     //} 
-
 game();
