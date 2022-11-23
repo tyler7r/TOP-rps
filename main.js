@@ -55,11 +55,13 @@ function updateScore() {
     console.log("Player: " + playerWins + " Computer: " + computerWins + " Ties: " + ties)
 }
 
-function declareWinner (playerWins, computerWins, ties) {
-    if (playerWins > computerWins && playerWins > ties) {
-        return "Player Wins the Match, way to not suck";
-    } else if (computerWins > playerWins && computerWins > ties) {
-        return "Computer Wins, do better next time";
+function declareWinner () {
+    if ((winners.filter((item) => item == "Player").length) > (winners.filter((item) => item == "Computer").length) && 
+    (winners.filter((item) => item == "Player").length) > (winners.filter((item) => item == "Tie").length)) {
+        return "Player Wins the Match, way to not suck"
+    } else if ((winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Player").length) && 
+    (winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Tie").length)) {
+         return "Computer Wins, do better next time";
     } else {
         return "It's a Tie"
     }
@@ -73,4 +75,10 @@ function isValid (promptInput) {
     }
 }
 
-game();
+function playAgain() {
+    winners.length = 0;
+    console.log ("New Game");
+    game();
+}
+
+game ();
