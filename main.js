@@ -2,11 +2,19 @@ const choices = ["rock", "paper", "scissors"];
 const winners = [];
 
 function game() {
-    for (let i = 1; i <= 5; i++) {
-        console.log("Round: " + i);
-        playRound();
-        console.log ("---------------------");
+    console.log ("First to 3 wins, wins the match");
+    let i = 1;
+    while ((winners.filter((item) => item == "Player").length < 3) && (winners.filter((item) => item == "Computer").length < 3)) {
+        console.log ("Game #" + i);
+        playRound ();
+        i++;
+        console.log ("---------------");
     }
+    // for (let i = 1; i <= 5; i++) {
+    //     console.log("Round: " + i);
+    //     playRound();
+    //     console.log ("---------------------");
+    // }
     console.log(declareWinner());
 }
 
@@ -56,14 +64,13 @@ function updateScore() {
 }
 
 function declareWinner () {
-    if ((winners.filter((item) => item == "Player").length) > (winners.filter((item) => item == "Computer").length) && 
-    (winners.filter((item) => item == "Player").length) > (winners.filter((item) => item == "Tie").length)) {
-        return "Player Wins the Match, way to not suck"
-    } else if ((winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Player").length) && 
-    (winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Tie").length)) {
-         return "Computer Wins, do better next time";
+    if ((countWinners("Player")) > (countWinners("Computer"))) {
+        return "Player Wins the Match, way to not suck";
+    // } else if ((winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Player").length) && 
+    // (winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Tie").length)) {
+    //      return "Computer Wins, do better next time";
     } else {
-        return "It's a Tie"
+        return "Computer Wins, do better next time";
     }
 }
 
@@ -79,6 +86,10 @@ function playAgain() {
     winners.length = 0;
     console.log ("New Game");
     game();
+}
+
+function countWinners (computer) {
+    return (winners.filter((item) => item == computer).length);
 }
 
 game ();
