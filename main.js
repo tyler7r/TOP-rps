@@ -66,9 +66,6 @@ function updateScore() {
 function declareWinner () {
     if ((countWinners("Player")) > (countWinners("Computer"))) {
         return "Player Wins the Match, way to not suck";
-    // } else if ((winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Player").length) && 
-    // (winners.filter((item) => item == "Computer").length) > (winners.filter((item) => item == "Tie").length)) {
-    //      return "Computer Wins, do better next time";
     } else {
         return "Computer Wins, do better next time";
     }
