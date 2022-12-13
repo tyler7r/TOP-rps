@@ -95,6 +95,7 @@ function playAgain() {
         document.querySelector('#cWins').textContent = 'Computer Wins: 0';
         document.querySelector('#ties').textContent = 'Ties: 0';
         document.querySelector('#gameWinner').textContent = '';
+        playAgainButton.style = 'display: none';
     })
 }
 

@@ -1,6 +1,6 @@
 #playAgain {
     display: none;
 }
-.revealBtn {
+#playAgain.revealBtn {
     display: block;
 }
