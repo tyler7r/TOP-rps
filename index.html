@@ -5,8 +5,21 @@
         <title>Rock Paper Scissors</title>
     </head>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <body>
-        <button onclick="playAgain()">PLAY AGAIN</button>
+        <div>
+            <button class="playerChoice" id="rock">Rock</button>
+            <button class="playerChoice" id="paper">Paper</button>
+            <button class="playerChoice" id="scissors">Scissors</button>
+        </div>
+        <div class="scoreboard">
+            <h1>Scoreboard</h1>
+                <h2 id="pWins">Player: 0</h2>
+                <h2 id="cWins">Computer: 0</h2>
+                <h2 id="ties">Ties: 0</h2>
+                <h2 id="roundWinner"> </h2>
+                <h2 id="gameWinner"> </h2>
+        </div>
+        <button id="playAgain">Play Again?</button>
     </body>
 </html>
